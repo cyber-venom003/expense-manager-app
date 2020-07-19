@@ -1,0 +1,17 @@
+.summary-area {
+    margin-bottom: $l-size;
+    background: fade-out($color: #d3e8f0bb, $amount: 0.45);
+    padding: $l-size 0;
+}
+
+.summary-area__font {
+    font-weight: 100;
+    margin: 0;
+    span {
+        font-weight: 800;
+    }
+}
+
+.summary-area__actions {
+    margin-top: $m-size;
+}

@@ -1,0 +1,19 @@
+html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    color: $greyish-blue;
+    background: #fff;
+    font-family: Product Sans, Helvetica, Arial, sans-serif;
+    font-size: $m-size*1.25;
+    line-height: 1.5;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    cursor: default;
+  }
