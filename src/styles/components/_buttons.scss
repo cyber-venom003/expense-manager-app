@@ -1,6 +1,6 @@
 .button {
     height: $xl-size*1.25;
-    width: $xl-size*4.25;
+    // width: $xl-size*4.2;
     border-radius: $s-size;
     text-decoration: none;
     line-height: 1;
@@ -10,6 +10,11 @@
     background: #1f99fd;
     color: #ffffff;
     font-size: $font-size-large;
+}
+
+.button--secondary {
+    @extend .button;
+    background: #ff2a2a;
 }
 
 .button--link {
