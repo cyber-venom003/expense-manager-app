@@ -9,6 +9,7 @@ import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import {firebase} from'./firebase/firebase';
+import LoadingPage from './components/loadingPage';
 
 const store = configureStore();
 
@@ -32,7 +33,7 @@ const renderApp = () => {
     }
 }
 
-ReactDOM.render(jsx , document.getElementById("Paragraph"));
+ReactDOM.render(<LoadingPage /> , document.getElementById("Paragraph"));
 
 firebase.auth().onAuthStateChanged((user) => {
     if(user){
@@ -46,7 +47,8 @@ firebase.auth().onAuthStateChanged((user) => {
         console.log('Login SuccessFul');
     } else {
         store.dispatch(logout());
+        renderApp();
         history.push('/');
         console.log('LogOut Successful');
     }
-})
+});
